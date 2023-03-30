@@ -1,4 +1,4 @@
-// 1.Using oject literal
+// 1.Using object literal
 
 const student = {name: 'Sakib Al Hasan', job: 'cricketer'};
 
