@@ -2,8 +2,8 @@ const kibria = {
     id: 101,
     money: 5000,
     name: 'Rj Kibria',
-    treatDay: function(expense){
-        this.money = this.money - expense ;
+    treatDay: function(expense, bokshis,tax){
+        this.money = this.money - expense - bokshis -tax;
         console.log(this);
         return this.money;
     }
@@ -20,10 +20,6 @@ const normalGolam = {
     money: 8000,
     name:'Normal Golam'
 }
-// kibria.treatDay(100)
 
-
-
-const heroTreatDey = kibria.treatDay.bind(heroBalam);
-heroTreatDey(500);
-const normalTreatDey = kibria.treatDay.bind(normalGolam);
+kibria.treatDay.call(heroBalam, 500, 100,25);
+kibria.treatDay.call(heroBalam, 300,50,15);
